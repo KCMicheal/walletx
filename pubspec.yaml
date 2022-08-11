@@ -42,6 +42,9 @@ dependencies:
   http: ^0.13.5
   intl: ^0.17.0
   modal_bottom_sheet: ^2.1.0
+  google_fonts: ^3.0.1
+  slider_button: ^2.0.0
+  page_transition: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +67,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  assets:
+    - assets/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

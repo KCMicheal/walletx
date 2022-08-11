@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:metamask/utils/assets.dart';
-import 'package:metamask/utils/colors.dart';
-import 'package:metamask/utils/ether_service.dart';
-import 'package:metamask/utils/multi_value_listenable.dart';
+import 'package:walletx/utils/assets.dart';
+import 'package:walletx/utils/colors.dart';
+import 'package:walletx/utils/ether_service.dart';
+import 'package:walletx/utils/multi_value_listenable.dart';
 import 'package:slider_button/slider_button.dart';
 import 'package:walletconnect_dart/walletconnect_dart.dart';
 
@@ -20,6 +20,14 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    // listenableConnector.value.on('connect', (session) => listenableSession.value = session);
+    // listenableConnector.value.on('disconnect', (payload) => listenableSession.value = null);
+    // listenableConnector.value.on('session_update', (payload) {
+    //   listenableSession.value = payload as SessionStatus?;
+    //   print(listenableSession.value!.accounts[0]);
+    //   print(listenableSession.value!.chainId);
+    // });
+
     return ValueListenableBuilder(
         valueListenable: listenableUri,
         builder: (context, String value, child) {
@@ -47,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(100)),
-                                child: Text('Connect with Metamask',
+                                child: Text('Connect with walletx',
                                     style: TextStyle(
                                         color: GlobalColors.polygonDarkColor,
                                         fontSize: 14,
